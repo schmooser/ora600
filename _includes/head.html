@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>
+      {% if page.title %}{{ page.title }} &middot; {{ site.title }}
+      {% else %}{{ site.author }}{% endif %}
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% if page.description %}<meta name="description" content="{{ page.description }}">
+    {% elsif page.summary %}<meta name="description" content="{{ page.summary }}">
+    {% else %}<meta name="description" content="{{ site.description }}">{% endif %}
+    <link rel="icon" href="/favicon.png">
+    <link rel="alternate" type="application/rss+xml"  title="RSS"   href="/feed.xml" />
+    <script src="//use.typekit.net/cup5bnl.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+    <link rel="stylesheet" href="/style.css" type="text/css">
+</head>
+<body>

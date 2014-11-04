@@ -1,0 +1,14 @@
+description: A blog about databases, programming, and other interesting things.
+url: http://ora600.ru
+permalink: /posts/:title
+markdown: PPV
+future: true
+poole:
+    word_separator: "-"
+#include: [".well-known"]
+sass:
+    sass_dir: _sass
+    sourcemap: true
+
+title: Ora600
+author: Pavel Popov
