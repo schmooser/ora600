@@ -1,13 +1,15 @@
+{% assign posts = include.posts %}
 {% if include.limit %}
   {% assign lim = include.limit %}
 {% else %}
   {% assign lim = 999999 %}
 {% endif %}
-<section class="post-index">
-  {% for post in site.posts limit:lim %}
-  <article>
+<section class="post-index" id="articles">
+  {% for post in posts limit:lim %}
+  <article class="post">
     <h2><a href="{{post.url}}">{{ post.title }}</a></h2>
     <p>{{ post.summary }}</p>
+    {{ post.content }}
   </article>
   {% endfor %}
 </section>

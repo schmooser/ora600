@@ -6,16 +6,20 @@ description: Some description
 category: lens
 ---
 
-Yesterday I bought very old lens – Nikon 85mm f/2 AI. I read about it on [Ken Rockwell's site][kenrockwell] and decided that it fits my needs as 85mm lens.
+Yesterday I bought very old lens – Nikon 85mm f/2 AI. I read about it on [Ken
+Rockwell's site][kenrockwell] and decided that it fits my needs as 85mm lens.
 
-I chose between 85mm f/2 AI and 85 f/1.4 AI-s. On the f/2's side was bargain price ($140), small weight (2 times lighter than f/1.4), size of filters (52mm, I have many filters and caps on that size). But I still wanted to buy f/1.4 because everyone says that it's magnificent lens. As for f/2, reviews are varied from moderate to positive. I had a good lot for f/1.4 (it was selling for about $400) so I wanted to buy it, but at the last moment merchant said that I was overthrown by someone who sent money by mail. So I decided to buy f/2.
-
-
-
+I chose between 85mm f/2 AI and 85 f/1.4 AI-s. On the f/2's side was bargain
+price ($140), small weight (2 times lighter than f/1.4), size of filters (52mm,
+I have many filters and caps on that size). But I still wanted to buy f/1.4
+because everyone says that it's magnificent lens. As for f/2, reviews are varied
+from moderate to positive. I had a good lot for f/1.4 (it was selling for about
+$400) so I wanted to buy it, but at the last moment merchant said that I was
+overthrown by someone who sent money by mail. So I decided to buy f/2.
 
 [kenrockwell]: http://www.kenrockwell.com/nikon/85f2ais.htm
 
-##Sharpness comparison
+##Sharpness
 
 Here are images at different apperture settings:
 
@@ -33,10 +37,6 @@ What I want from 85mm lens is a good bokeh. I plan to use it for potraits so bok
 
 
 Out of focus grass looks terrible.
-![Example of terrible bokeh](http://farm6.staticflickr.com/5604/15506196787_9aae056bf8_c.jpg)
-
-![](http://farm6.staticflickr.com/5604/15506196787_9aae056bf8_c.jpg)
-![](http://farm6.staticflickr.com/5604/15506196787_9aae056bf8_c.jpg)
 ![](http://farm6.staticflickr.com/5604/15506196787_9aae056bf8_c.jpg)
 
 

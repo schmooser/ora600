@@ -2,10 +2,17 @@
 layout: page
 ---
 <div class="post">
-    <p class="meta">by <a href="/">{{ site.author }}</a> &middot; {{ page.date | date: "%d %h %Y" }}</p>
-    <section class="post-body">
-      {{ content }}
-    </section>
-    <p class="meta text-right">Like what you just read? <a
-      href="https://tinyletter.com/pavelpopov">Subscribe</a>.</p>
+  <p class="meta">
+    by <a href="/">{{ site.author }}</a>
+    {% assign s = page.categories | size %}
+    {% if s != 0 %}
+      in {{ page.categories | array_to_sentence_string }}
+    {% endif %}
+    &middot; {{ page.date | date: "%d %h %Y" }}
+  </p>
+  <section class="post-body">
+    {{ content }}
+  </section>
+  <p class="meta text-right">Like what you just read? <a
+    href="https://tinyletter.com/pavelpopov">Subscribe</a>.</p>
 </div>

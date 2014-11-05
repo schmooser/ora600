@@ -2,9 +2,9 @@ description: A blog about databases, programming, and other interesting things.
 url: http://ora600.ru
 permalink: /posts/:title
 markdown: PPV
-future: true
-poole:
-    word_separator: "-"
+paginate: 5
+paginate_path: "notes/page:num"
+
 #include: [".well-known"]
 sass:
     sass_dir: _sass
@@ -12,3 +12,9 @@ sass:
 
 title: Ora600
 author: Pavel Popov
+
+collections:
+  travels:
+    output: true
+    permalink: /awesome/:path/
+

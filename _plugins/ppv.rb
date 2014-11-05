@@ -20,11 +20,11 @@ class Jekyll::Converters::Markdown::PPV
       p.css("br").each{ |br| br.remove }
 
       imgs = p.css "img"
-      imgs.wrap "<div class='pure-u-1 pure-u-sm-1-2'></div>"
+      imgs.wrap "<div class='col-md-6'></div>"
       #imgs.wrap("<div class='pure-u-1 pure-u-md-1-%s'></div>" % imgs.length)
 
       p.name = 'div'
-      p['class'] = 'pure-g'
+      p['class'] = 'row'
     end
 
     doc.css("p:has(img)").each do |p|
@@ -36,7 +36,7 @@ class Jekyll::Converters::Markdown::PPV
     doc.css("img").wrap "<div class='photo-box'></div>"
     doc.css(".photo-box").each do |box|
       img = box.at_css "img"
-      img['class'] = 'pure-img'
+      img['class'] = 'img-responsive'
       if not img['alt'].empty?
         caption = Nokogiri::XML::Node.new "span", doc
         caption.content = img['alt']
@@ -49,6 +49,10 @@ class Jekyll::Converters::Markdown::PPV
       p.remove if p.content.strip.empty?
     end
 
-    doc.at('body').inner_html
+    if doc.at('body').nil?
+      'nil'
+    else
+      doc.at('body').inner_html
+    end
   end
 end

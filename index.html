@@ -1,10 +1,13 @@
 ---
 layout: scaffold
+title: Notes
+summary: about learning English, working with Oracle Database, taking photos and other interesting things
 ---
+{% if paginator.page == 1 %}
 <div class="hero">
   <div class="hero-wrapper">
     <div class="content">
-      <h1>@schmooser</h1>
+      <h1>{{ site.author }}</h1>
       <p>Oracle Database Developer &amp; lover of nice things.</p>
       <h2>Navigation</h2>
       {% include nav.html %}
@@ -14,7 +17,35 @@ layout: scaffold
 </div>
 <main>
   <div class="content">
-    <h1 id="writing">Writing</h1>
+    <h1 id="writing">Selected posts</h1>
     {% include post-index.html %}
   </div>
 </main>
+{% else %}
+{% include masthead.html %}
+  <div class="page">
+    <div class="content">
+      {% include post-content.html posts=paginator.posts %}
+      <nav>
+        <ul class="pager">
+          {% if paginator.previous_page %}
+          {% assign pp = paginator.previous_page %}
+          <li class="previous">
+            <a href="/notes/{% if pp != 1 %}page{{pp}}/{% endif %}#articles">
+              &larr; Previous page
+            </a>
+          </li>
+          {% endif %}
+          {% if paginator.next_page %}
+            <li class="next">
+              <a href="/notes/page{{ paginator.next_page }}/#articles">
+                Next page &rarr;
+              </a>
+            </li>
+          {% endif %}
+        </ul>
+      </nav>
+    </div>
+  </div>
+</main>
+{% endif %}
