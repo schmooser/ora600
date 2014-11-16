@@ -15,6 +15,7 @@ class Jekyll::Converters::Markdown::PPV
     html = Kramdown::Document.new(content).to_html
     doc = Nokogiri::HTML(html)
 
+=begin
     ps = doc.css "p:has(img:gt(1))" # paragraphs with more than 1 image
     ps.each do |p|
       p.css("br").each{ |br| br.remove }
@@ -26,12 +27,32 @@ class Jekyll::Converters::Markdown::PPV
       p.name = 'div'
       p['class'] = 'row'
     end
+=end
+
+    ps = doc.css "p:has(img:gt(1))" # paragraphs with more than 1 image
+    ps.each do |p|
+      p.css("br").each{ |br| br.remove }
+      p.name = 'div'
+      p['class'] = 'fotorama'
+      p['data-nav'] = 'thumbs'
+
+      imgs = p.css "img"
+      imgs.each do |img|
+        img.name = 'a'
+        img['href'] = img['src']
+        thumb = Nokogiri::XML::Node.new "img", doc
+        thumb['src'] = img['src'].gsub(/(.+?)(_?[a-z]?)?\.jpg/, '\1_t.jpg')
+        img.remove_attribute('src')
+        img << thumb
+      end
+    end
 
     doc.css("p:has(img)").each do |p|
       p.name = 'div'
       p['class'] = 'p'
     end
 
+=begin
     # turn every img into div with caption
     doc.css("img").wrap "<div class='photo-box'></div>"
     doc.css(".photo-box").each do |box|
@@ -44,6 +65,7 @@ class Jekyll::Converters::Markdown::PPV
       end
     end
     doc.css(".photo-box span").wrap "<aside></aside>"
+=end
 
     doc.css('p').each do |p|
       p.remove if p.content.strip.empty?

@@ -62,7 +62,8 @@ body {
 
 // Content padding & width-limiting
 .content {
-  max-width: calc(700px + 2rem);
+  //max-width: calc(800px + 2rem);
+  max-width: 800px;
   margin: 0 auto;
   position: relative;
   padding: 1rem;

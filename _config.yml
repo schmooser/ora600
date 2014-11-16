@@ -16,5 +16,5 @@ author: Pavel Popov
 collections:
   travels:
     output: true
-    permalink: /awesome/:path/
+    permalink: /travel/:path/
 

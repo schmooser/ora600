@@ -1,9 +1,7 @@
 ---
-
-layout: post  
-title: Quick sort in Haskell and Python  
-categories: haskell python  
-
+layout: post
+title: Quick sort in Haskell and Python
+categories: haskell python favorite
 ---
 
 While reading [Learn you a Haskell for great good][learn-haskell] I found [realization][haskell-qsort] of quick sort algorithm. It's easy to understand in terms of recursion -- for each element sorted array is `"sorted array of elements which are less then current" + "current element" + "sorted array of elements which are greater or equal then current"`.

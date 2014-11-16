@@ -1,0 +1,26 @@
+{% if include.limit %}
+  {% assign lim = include.limit %}
+{% else %}
+  {% assign lim = 999999 %}
+{% endif %}
+
+<div class="project-list">
+
+{% for post in include.posts limit:lim %}
+
+<article>
+  <div class="project-image">
+  {% if post.icon %}
+    <a href="{{ post.url }}"><img src="{{ post.icon }}" alt="{{ travel.title }}"/></a>
+  {% endif %}
+  </div>
+  <div class="project-description"><a href="{{ post.url }}">
+      <h2>{{ post.title }}</h2></a>
+    <p>{{ post.summary }}</p>
+  </div>
+</article>
+
+{% endfor %}
+
+</div>
+

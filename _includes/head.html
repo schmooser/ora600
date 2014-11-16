@@ -15,5 +15,12 @@
     <script src="//use.typekit.net/cup5bnl.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
     <link rel="stylesheet" href="/style.css" type="text/css">
+    {% if page.jquery %}
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    {% endif %}
+    {% if page.fotorama %}
+    <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.2/fotorama.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.2/fotorama.js"></script>
+    {% endif %}
 </head>
 <body>

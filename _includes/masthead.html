@@ -1,6 +1,11 @@
+{% if include.back %}
+  {% assign back = include.back %}
+{% else %}
+  {% assign back = '/' %}
+{% endif %}
 <header class="masthead">
   <div class="content">
-    <a class="arrow-left" href="/"></a><h1>{{page.title}}</h1>
+    <a class="arrow-left" href="{{ back }}"></a><h1>{{page.title}}</h1>
     <p class="intro">{{page.summary}}</p>
   </div>
 </header>

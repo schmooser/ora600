@@ -3,7 +3,7 @@ layout: post
 lang: en
 title: Test of Nikon 85mm f/2 AI lens
 description: Some description
-category: lens
+categories: lens photo
 ---
 
 Yesterday I bought very old lens – Nikon 85mm f/2 AI. I read about it on [Ken

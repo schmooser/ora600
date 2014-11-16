@@ -1,5 +1,5 @@
 ---
-layout: scaffold
+layout: default
 title: Notes
 summary: about learning English, working with Oracle Database, taking photos and other interesting things
 ---
@@ -18,7 +18,7 @@ summary: about learning English, working with Oracle Database, taking photos and
 <main>
   <div class="content">
     <h1 id="writing">Selected posts</h1>
-    {% include post-index.html %}
+    {% include post-index.html posts=site.categories.favorite %}
   </div>
 </main>
 {% else %}
